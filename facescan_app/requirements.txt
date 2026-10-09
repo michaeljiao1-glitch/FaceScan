@@ -1,0 +1,6 @@
+-r ../requirements_base.txt
+tensorflow
+tf-keras
+SQLAlchemy>=2.0
+Pillow
+# add the driver for your database, e.g. pyodbc (SQL Server), pymysql (MySQL), psycopg (PostgreSQL)
