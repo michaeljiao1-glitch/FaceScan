@@ -30,4 +30,4 @@ deepface/api/proto/*_pb2.pyi
 deepface/api/proto/*_pb2_grpc.py
 # FaceScan app: local settings and enrolled face data
 config.ini
-faces.db
+faces*.db

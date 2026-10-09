@@ -3,4 +3,4 @@ tensorflow
 tf-keras
 SQLAlchemy>=2.0
 Pillow
-# add the driver for your database, e.g. pyodbc (SQL Server), pymysql (MySQL), psycopg (PostgreSQL)
+pyodbc  # SQL Server (needs "Microsoft ODBC Driver 18 for SQL Server" installed)

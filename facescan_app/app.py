@@ -40,7 +40,7 @@ class FaceScanApp:
         self.frame = None
         self._reset_job: Optional[str] = None
 
-        root.title("FaceScan Check-In")
+        root.title(f"FaceScan Check-In - {config.database}" if config.database else "FaceScan Check-In")
         root.configure(bg="white")
 
         self.video = tk.Label(root, bg="black")
@@ -207,12 +207,13 @@ class FaceScanApp:
 def main():
     parser = argparse.ArgumentParser(description="FaceScan patient check-in kiosk")
     parser.add_argument("--config", default="config.ini", help="path to config.ini")
+    parser.add_argument("--database", help="clinic database (Initial Catalog), overrides config.ini")
     args = parser.parse_args()
 
     root = tk.Tk()
     try:
-        config = load_config(args.config)
-    except FileNotFoundError as err:
+        config = load_config(args.config, args.database)
+    except (FileNotFoundError, ValueError) as err:
         root.withdraw()
         messagebox.showerror("FaceScan", str(err))
         return
