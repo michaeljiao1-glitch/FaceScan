@@ -1,0 +1,14 @@
+Face models used by FaceScan (all run by OpenCV's DNN module, offline):
+
+res10_300x300_ssd_deploy.prototxt
+res10_300x300_ssd_iter_140000.caffemodel
+    Face detector (ResNet-10 SSD) from the OpenCV project.
+    https://github.com/opencv/opencv/tree/4.0.0/samples/dnn/face_detector
+    https://github.com/opencv/opencv_3rdparty/tree/dnn_samples_face_detector_20170830
+
+face_recognition_sface_2021dec.onnx
+    SFace face recognition model, OpenCV Model Zoo, Apache License 2.0.
+    https://github.com/opencv/opencv_zoo/tree/main/models/face_recognition_sface
+
+haarcascade_eye.xml
+    Eye detector used to align faces, from OpenCV 4.x (Intel License Agreement, see file header).
